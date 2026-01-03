@@ -86,12 +86,14 @@ flake8 app/
 ### Stopping Development Session
 
 ```bash
-# From your Mac (outside container):
 ./dev-session-stop.sh
-
-# Or manually:
-docker compose down
 ```
+
+This will:
+- Stop containers gracefully
+- Auto-commit any changes
+- Push to GitHub (Layer 1 backup)
+- Remind you to resume Dropbox sync
 
 **Note**: Database data persists in Docker volume `postgres_data`. Your source files sync automatically via volume mount.
 
