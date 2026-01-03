@@ -1,0 +1,80 @@
+# =============================================================================
+# ALWAYS IGNORE (All Environments)
+# =============================================================================
+# These files should never be committed in any environment
+
+# Environment variables (CRITICAL - never commit secrets)
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Testing artifacts (not test files themselves - those are committed for agent context)
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database files (not migrations - those are committed)
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+.dockerignore
+
+# Logs
+*.log
+
+# Mypy cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# =============================================================================
+# DEVELOPMENT (Agent Context - COMMIT these)
+# =============================================================================
+# The following are COMMITTED for agent context and monitoring:
+# - tests/ (all test files)
+# - docs/ (all documentation)
+# - *.ini (pytest.ini, mypy.ini, alembic.ini)
+# - docker-compose.yml, Dockerfile
+# - migrations/ (all migration files)
+# - All source code (app/, scripts/)
+#
+# Agents need full context to work effectively, so we commit everything
+# except secrets and build artifacts.
+
+# =============================================================================
+# PRODUCTION (Future consideration)
+# =============================================================================
+# Currently same as development - agents need everything for context.
+# May exclude certain dev-only files in production branches in the future.

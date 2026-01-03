@@ -1,0 +1,32 @@
+# Web Framework
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Database
+SQLAlchemy==2.0.23
+Flask-SQLAlchemy==3.1.1
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# Environment
+python-dotenv==1.0.0
+
+# Authentication (for M2)
+bcrypt==4.1.2
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-flask==1.3.0
+
+# Type Checking
+mypy==1.7.1
+
+# Code Quality
+black==23.12.1
+flake8==6.1.0
+
+# Security
+safety==2.3.5
+bandit==1.7.5
+
