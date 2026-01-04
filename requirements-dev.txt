@@ -1,0 +1,25 @@
+# =============================================================================
+# Life Scheduler - Development Dependencies
+# =============================================================================
+# Dev-only tools for testing, linting, type checking, and security scanning
+# This file includes runtime dependencies via -r requirements.txt
+
+# Include runtime dependencies
+-r requirements.txt
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0       # Coverage reporting
+
+# Type Checking
+mypy==1.7.1             # Static type checker
+
+# Code Quality
+black==23.12.1          # Code formatter
+flake8==6.1.0           # Linter
+
+# Security
+safety==3.2.11          # Check for known vulnerabilities (updated for packaging>=22.0 compat)
+bandit==1.7.5           # Security linter for Python code
+
+
